@@ -28,7 +28,7 @@ export const Paginate: FC<PaginationProps> = ({
         <FiArrowLeft
           data-testid="prevPage"
           size={20}
-          className={classNames("mr-3 text-gray-500 dark:text-white", {
+          className={classNames("mr-3 text-gray-900 dark:text-white", {
             "cursor-pointer": page !== 0,
             "opacity-50": page === 0,
           })}
@@ -44,7 +44,7 @@ export const Paginate: FC<PaginationProps> = ({
         <FiArrowRight
           data-testid="nextPage"
           size={20}
-          className={classNames("ml-3 text-gray-500 dark:text-white", {
+          className={classNames("ml-3 text-gray-900 dark:text-white", {
             "cursor-pointer": page !== totalPages - 1,
             "opacity-50": page === totalPages - 1,
           })}
@@ -86,7 +86,7 @@ export const Paginate: FC<PaginationProps> = ({
 
       <div className="flex items-center justify-center flex-grow">
         <Pagination.PageButton
-          activeClassName="bg-primary-50 dark:bg-opacity-0 text-primary-600 dark:text-white"
+          activeClassName="bg-gray-50 dark:bg-opacity-0 text-gray-900 dark:text-white"
           inactiveClassName="text-gray-500"
           className={
             "flex items-center justify-center h-10 w-10 rounded-full cursor-pointer font-medium"

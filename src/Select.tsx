@@ -35,8 +35,8 @@ export const Select: FC<SelectProps> = ({
             <Listbox.Button
               data-testid="selectButton"
               className={classNames(
-                "shadow-sm flex items-center text-md border border-gray-300 dark:border-gray-500 h-11 px-3.5 rounded-lg bg-white dark:bg-gray-800",
-                "focus:ring-4 focus:border-primary-300 dark:focus:border-gray-100 focus:ring-primary-100 dark:focus:ring-gray-100 dark:focus:ring-opacity-20 whitespace-nowrap",
+                "shadow-sm flex items-center text-md border border-gray-300 dark:border-gray-500 h-11 px-3.5 bg-white dark:bg-gray-800",
+                "focus:ring-1 focus:border-gray-300 dark:focus:border-gray-100 focus:ring-gray-100 dark:focus:ring-gray-100 dark:focus:ring-opacity-20 whitespace-nowrap",
                 {
                   "text-gray-900 dark:text-white": selectedOption,
                   "text-gray-500 dark:text-gray-300": !selectedOption,
@@ -63,7 +63,7 @@ export const Select: FC<SelectProps> = ({
                 )}
               />
             </Listbox.Button>
-            <Listbox.Options className="absolute z-10 inline-flex flex-col w-full bg-white border border-gray-300 rounded-lg shadow-lg top-13 dark:border-gray-500 dark:bg-gray-800">
+            <Listbox.Options className="absolute z-10 inline-flex flex-col w-full bg-white border border-gray-300 shadow-lg top-13 dark:border-gray-500 dark:bg-gray-800">
               {options.map((option, index) => (
                 <Listbox.Option
                   as={React.Fragment}
@@ -84,7 +84,7 @@ export const Select: FC<SelectProps> = ({
                     >
                       <div className="flex items-center">{option.label}</div>
                       {selected ? (
-                        <FiCheck className="ml-5 text-primary-600 dark:text-white" />
+                        <FiCheck className="ml-5 text-gray-600 dark:text-white" />
                       ) : null}
                     </li>
                   )}
